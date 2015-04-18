@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 8bde1da8e696f0c4398731173bf0394c
+timeCreated: 1429391217
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: r_brazo
+    21300002: l_brazo
+    21300004: head
+    21300006: r_antebrazo
+    21300008: l_antebrazo
+    21300010: torso
+    21300012: r_mano
+    21300014: l_mano
+    21300016: r_muslo
+    21300018: l_muslo
+    21300020: hips
+    21300022: r_pierna
+    21300024: l_pierna
+    21300026: weapon
+    21300028: r_pie
+    21300030: l_pie
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: r_brazo
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1690
+        width: 64
+        height: 242
+      alignment: 9
+      pivot: {x: .5, y: .845206261}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: l_brazo
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1690
+        width: 64
+        height: 242
+      alignment: 9
+      pivot: {x: .5, y: .843985081}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: head
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1457
+        width: 524
+        height: 520
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: r_antebrazo
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1403
+        width: 87
+        height: 251
+      alignment: 9
+      pivot: {x: .595683277, y: .881398737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: l_antebrazo
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1409
+        width: 87
+        height: 251
+      alignment: 9
+      pivot: {x: .604683697, y: .880991638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: torso
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1130
+        width: 223
+        height: 303
+      alignment: 9
+      pivot: {x: .646212101, y: .130950406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: r_mano
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1243
+        width: 129
+        height: 134
+      alignment: 9
+      pivot: {x: .552950621, y: .856824279}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: l_mano
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1240
+        width: 129
+        height: 134
+      alignment: 9
+      pivot: {x: .552950621, y: .856824279}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: r_muslo
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 750
+        width: 164
+        height: 413
+      alignment: 9
+      pivot: {x: .472233087, y: .896937788}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: l_muslo
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 747
+        width: 164
+        height: 413
+      alignment: 9
+      pivot: {x: .486116737, y: .896937788}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hips
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 747
+        width: 258
+        height: 278
+      alignment: 9
+      pivot: {x: .549644291, y: .776435912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: r_pierna
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 266
+        width: 119
+        height: 426
+      alignment: 9
+      pivot: {x: .672200978, y: .932927787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: l_pierna
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 263
+        width: 119
+        height: 426
+      alignment: 9
+      pivot: {x: .710467696, y: .92758292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: weapon
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 80
+        width: 974
+        height: 560
+      alignment: 9
+      pivot: {x: .217060685, y: .458496541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: r_pie
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 72
+        width: 121
+        height: 137
+      alignment: 9
+      pivot: {x: .274193883, y: .815771639}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: l_pie
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 72
+        width: 121
+        height: 137
+      alignment: 9
+      pivot: {x: .293011129, y: .76591289}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
