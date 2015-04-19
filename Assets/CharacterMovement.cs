@@ -45,7 +45,12 @@ public class CharacterMovement : MonoBehaviour {
 				speed.z
 				);
 		}
-
+		if (speed.x < 0) {
+			transform.localScale = new Vector3(-1,1,1);
+		}
+		if (speed.x > 0) {
+			transform.localScale = new Vector3(1,1,1);
+		}
 		characterController.Move (speed * Time.deltaTime);
 	}
 }
