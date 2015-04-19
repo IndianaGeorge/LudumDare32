@@ -29,7 +29,7 @@ public class CharacterMovement : MonoBehaviour {
 		if (characterController.isGrounded) { // floortime
 			speed.Set(
 				flatSpeed.x + Physics.gravity.x,
-				speed.y + (Physics.gravity.y * Time.deltaTime),
+				0,
 				flatSpeed.y + Physics.gravity.z
 				);
 			if (Input.GetButton ("Jump")) {
