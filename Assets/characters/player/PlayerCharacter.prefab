@@ -43,6 +43,7 @@ GameObject:
   - 95: {fileID: 9515888}
   - 143: {fileID: 14349932}
   - 114: {fileID: 11405936}
+  - 114: {fileID: 11400298}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -558,6 +559,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fc59d259a66694e837b23088828eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadowPrefab: {fileID: 492658, guid: 37e5ee3b1fa6e44488f09ed3d9d3ef2b, type: 2}
+  radius: .5
 --- !u!114 &11405936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,7 +583,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43969d4e721fca6499a8554e154df818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0
+  maxSpeed: 7
+  jumpSpeed: 15
+  speed: {x: 0, y: 0, z: 0}
+  isGrounded: 0
+  buttonDown: 0
 --- !u!143 &14349932
 CharacterController:
   m_ObjectHideFlags: 1

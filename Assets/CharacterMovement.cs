@@ -28,9 +28,9 @@ public class CharacterMovement : MonoBehaviour {
 		flatSpeed = flatSpeed * maxSpeed;
 		if (characterController.isGrounded) { // floortime
 			speed.Set(
-				flatSpeed.x + Physics.gravity.x,
+				flatSpeed.x,
 				0,
-				flatSpeed.y + Physics.gravity.z
+				flatSpeed.y
 				);
 			if (Input.GetButton ("Jump")) {
 				speed.y = jumpSpeed;
