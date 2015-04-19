@@ -10,9 +10,11 @@ public class CharacterMovement : MonoBehaviour {
 	public bool isGrounded;
 	public bool buttonDown;
 	CharacterController characterController;
+	Animator animator;
 	// Use this for initialization
 	void Start () {
 		characterController = GetComponent<CharacterController> ();
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -26,6 +28,7 @@ public class CharacterMovement : MonoBehaviour {
 			flatSpeed.Normalize();
 		}
 		flatSpeed = flatSpeed * maxSpeed;
+		animator.SetFloat ("flatSpeed", flatSpeed.magnitude);
 		if (characterController.isGrounded) { // floortime
 			speed.Set(
 				flatSpeed.x,
