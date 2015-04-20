@@ -40,9 +40,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467556}
-  - 114: {fileID: 11480514}
-  - 136: {fileID: 13608470}
   - 95: {fileID: 9592836}
+  - 143: {fileID: 14355216}
+  - 114: {fileID: 11432510}
+  - 114: {fileID: 11480514}
+  - 114: {fileID: 11487908}
   m_Layer: 0
   m_Name: EnemyCharacter
   m_TagString: Untagged
@@ -139,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.48000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413502}
@@ -162,6 +164,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11432510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43969d4e721fca6499a8554e154df818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 4
+  jumpSpeed: 10
 --- !u!114 &11480514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,10 +188,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7fc59d259a66694e837b23088828eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shadowPrefab: {fileID: 0}
+  shadowPrefab: {fileID: 492658, guid: 37e5ee3b1fa6e44488f09ed3d9d3ef2b, type: 2}
   radius: .699999988
---- !u!136 &13608470
-CapsuleCollider:
+--- !u!114 &11487908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da6b056a97f1ef40a3b766c8de7700f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!143 &14355216
+CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -184,10 +211,14 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
   m_Radius: .699999988
-  m_Height: 1.89999998
-  m_Direction: 1
-  m_Center: {x: 0, y: .949999988, z: 0}
+  m_SlopeLimit: 45
+  m_StepOffset: .300000012
+  m_SkinWidth: .0799999982
+  m_MinMoveDistance: .00100000005
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!212 &21229024
 SpriteRenderer:
   m_ObjectHideFlags: 1
