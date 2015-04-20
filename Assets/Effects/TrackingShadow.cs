@@ -3,15 +3,17 @@ using System.Collections;
 
 public class TrackingShadow : MonoBehaviour {
 	public Transform shadowPrefab;
+	public Transform parent;
 	public float radius;
 	Transform shadow;
 
 	// Use this for initialization
 	void Start () {
 		shadow = (Transform) Instantiate(shadowPrefab, transform.position, Quaternion.Euler(new Vector3(90,0,0)));
-		shadow.localScale.Set (
-			0.5f,
-			0.5f,
+		shadow.SetParent(parent);
+		shadow.localScale = new Vector3 (
+			radius,
+			radius,
 			1
 			);
 	}
