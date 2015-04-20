@@ -2,6 +2,7 @@
 using System.Collections;
 
 [RequireComponent (typeof (CharacterController))]
+[RequireComponent (typeof (IActuator))]
 public class CharacterMovement : MonoBehaviour {
 
 	public float maxSpeed;
@@ -9,17 +10,21 @@ public class CharacterMovement : MonoBehaviour {
 	Vector3 speed;
 	CharacterController characterController;
 	Animator animator;
+	IActuator actuator;
 	// Use this for initialization
 	void Start () {
 		characterController = GetComponent<CharacterController> ();
 		animator = GetComponent<Animator> ();
+		actuator = GetComponent<IActuator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		Vector3 throttle = actuator.getMotionCommand ();
 		Vector2 flatSpeed = new Vector2 (
-			Input.GetAxis("Horizontal"),
-			Input.GetAxis("Vertical"));
+			throttle.x,
+			throttle.z
+			);
 		if (flatSpeed.magnitude > 1) {
 			flatSpeed.Normalize();
 		}
@@ -31,7 +36,7 @@ public class CharacterMovement : MonoBehaviour {
 				0,
 				flatSpeed.y
 				);
-			if (Input.GetButton ("Jump")) {
+			if (throttle.y > 0.5) {
 				speed.y = jumpSpeed;
 			}
 		} else { // airtime
