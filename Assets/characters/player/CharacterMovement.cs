@@ -6,9 +6,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	public float maxSpeed;
 	public float jumpSpeed;
-	public Vector3 speed;
-	public bool isGrounded;
-	public bool buttonDown;
+	Vector3 speed;
 	CharacterController characterController;
 	Animator animator;
 	// Use this for initialization
@@ -19,8 +17,6 @@ public class CharacterMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		buttonDown = Input.GetButton ("Jump");
-		isGrounded = characterController.isGrounded;
 		Vector2 flatSpeed = new Vector2 (
 			Input.GetAxis("Horizontal"),
 			Input.GetAxis("Vertical"));
