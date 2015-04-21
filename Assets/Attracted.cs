@@ -24,9 +24,9 @@ public class Attracted : MonoBehaviour {
 		float minSqrDistance = range*range;
 		attractors = GameObject.FindGameObjectsWithTag (attractorTag);
 		if (attractors.Length > 0) {
-			diff = attractors[0].transform.position - position;
+			diff = attractors [0].transform.position - position;
 			minSqrDistance = diff.sqrMagnitude;
-			closestAttractor = attractors[0];
+			closestAttractor = attractors [0];
 			foreach (GameObject attractor in attractors) {
 				diff = attractor.transform.position - position;
 				if (diff.sqrMagnitude < minSqrDistance) {
@@ -37,20 +37,26 @@ public class Attracted : MonoBehaviour {
 			if (minSqrDistance < sqRange) {
 				if (!rigidBody.isKinematic) {
 					rigidBody.isKinematic = true;
-					rigidBody.detectCollisions = false;
+					Collider collider = GetComponent<Collider> ();
+					collider.isTrigger = true;
 					rotationSpeed = Random.value * maxRotation;
 				}
 				diff = closestAttractor.transform.position - position;
-				Debug.Log (((sqRange/diff.sqrMagnitude)).ToString());
-				float strength = (1-(diff.sqrMagnitude/sqRange));
-				transform.localPosition = transform.localPosition + (diff*strength*Time.deltaTime);
-				transform.Rotate(0,0,rotationSpeed*Time.deltaTime);
-			}
-			else { // back to physics
+				float strength = intensity * (1 - (diff.sqrMagnitude / sqRange));
+				transform.localPosition = transform.localPosition + (diff * strength * Time.deltaTime);
+				transform.Rotate (0, 0, rotationSpeed * Time.deltaTime);
+			} else { // back to physics
 				if (rigidBody.isKinematic) {
 					rigidBody.isKinematic = false;
-					rigidBody.detectCollisions = true;
+					Collider collider = GetComponent<Collider> ();
+					collider.isTrigger = false;
 				}
+			}
+		} else { // no attractor, back to physics
+			if (rigidBody.isKinematic) {
+				rigidBody.isKinematic = false;
+				Collider collider = GetComponent<Collider> ();
+				collider.isTrigger = false;
 			}
 		}
 	}
