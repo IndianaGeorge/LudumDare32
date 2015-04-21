@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43969d4e721fca6499a8554e154df818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 4
+  maxSpeed: 2
   jumpSpeed: 10
 --- !u!114 &11480514
 MonoBehaviour:
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shadowPrefab: {fileID: 492658, guid: 37e5ee3b1fa6e44488f09ed3d9d3ef2b, type: 2}
+  parent: {fileID: 0}
   radius: .699999988
 --- !u!114 &11487908
 MonoBehaviour:
